@@ -119,7 +119,7 @@ export default function Create() {
       className="relative min-h-screen grain-overlay"
       style={{ background: '#0D0620', paddingTop: 88, paddingBottom: 80 }}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
 
         {/* Header */}
         <div className="mb-10">

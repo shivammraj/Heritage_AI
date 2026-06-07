@@ -59,7 +59,7 @@ export default function Explore() {
 
   return (
     <div className="relative min-h-screen bg-raisin grain-overlay" style={{ paddingTop: 88, paddingBottom: 80 }}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 space-y-10">
 
         {/* Header */}
         <div style={{ borderBottom: '1px solid rgba(255,220,160,0.1)', paddingBottom: 28 }}>

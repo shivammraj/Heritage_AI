@@ -58,7 +58,7 @@ export default function Profile() {
       className="relative min-h-screen bg-raisin grain-overlay"
       style={{ paddingTop: 88, paddingBottom: 80 }}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-12">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 space-y-12">
 
         {/* ─── Profile header ─── */}
         <motion.div

@@ -82,7 +82,7 @@ export default function Landing() {
 
       {/* ━━━ HERO ━━━ */}
       <section
-        className="relative max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center"
+        className="relative max-w-[1440px] mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center"
         style={{ paddingTop: 'calc(var(--nav-h) + 48px)', paddingBottom: 80, minHeight: '90vh' }}
       >
         {/* Left 55% */}
@@ -222,7 +222,7 @@ export default function Landing() {
 
       {/* ━━━ LIVE CHALLENGES STRIP ━━━ */}
       <section style={{ background: 'rgba(18,9,30,0.65)', borderTop: '1px solid rgba(255,220,160,0.07)', borderBottom: '1px solid rgba(255,220,160,0.07)', paddingBlock: 56 }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
           <div className="flex items-end justify-between mb-7">
             <div>
               <span className="hero-label block mb-2">Live Challenges</span>
@@ -246,7 +246,7 @@ export default function Landing() {
       </section>
 
       {/* ━━━ HOW IT WORKS ━━━ */}
-      <section ref={stepsRef} className="max-w-6xl mx-auto px-4 sm:px-6" style={{ paddingBlock: 96 }}>
+      <section ref={stepsRef} className="max-w-[1440px] mx-auto px-4 sm:px-6" style={{ paddingBlock: 96 }}>
         <div className="mb-14">
           <span className="hero-label block mb-3">The Core Loop</span>
           <h2 className="font-fraunces font-bold text-chalk" style={{ fontSize: 'clamp(32px,5vw,52px)', letterSpacing: '-0.01em' }}>
@@ -288,7 +288,7 @@ export default function Landing() {
         ref={statsRef}
         style={{ background: 'rgba(18,9,30,0.45)', borderTop: '1px solid rgba(255,220,160,0.05)', paddingBlock: 88 }}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
           <div className="mb-14">
             <span className="hero-label block mb-3">By the numbers</span>
             <h2 className="font-fraunces font-bold text-chalk" style={{ fontSize: 'clamp(28px,4vw,44px)' }}>

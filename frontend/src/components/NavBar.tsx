@@ -37,7 +37,7 @@ export default function NavBar() {
       }}
     >
       <nav
-        className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between"
+        className="max-w-[1440px] mx-auto px-4 sm:px-6 flex items-center justify-between"
         style={{ height: 64 }}
         role="navigation"
         aria-label="Main navigation"

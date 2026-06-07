@@ -53,7 +53,7 @@ export default function IndiaSVGMap({ createdStates, correctStates, incorrectSta
           width="100%"
           height="100%"
           className="mx-auto"
-          style={{ minWidth: '320px', maxHeight: '580px' }}
+          style={{ width: '100%', maxHeight: '580px' }}
         >
           {/* Mapped States (Interactive) */}
           <g id="states">

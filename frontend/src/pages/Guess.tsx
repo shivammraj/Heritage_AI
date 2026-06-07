@@ -113,7 +113,7 @@ export default function Guess() {
       className="relative min-h-screen grain-overlay"
       style={{ background: '#0D0620', paddingTop: 88, paddingBottom: 120 }}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
         {/* ─── LEFT — Artwork ─── */}
         <div className="lg:col-span-5 space-y-5">
