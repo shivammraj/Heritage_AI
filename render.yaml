@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: heritage-ai-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: PORT
+        value: 3001
+      - key: FRONTEND_URL
+        sync: false
+        placeholder: "Your GitHub Pages URL (e.g., https://shivammraj.github.io)"
+      - key: ENCRYPTION_SECRET
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false
+        placeholder: "Your Gemini API Key"
+      - key: FIREBASE_PROJECT_ID
+        sync: false
+        placeholder: "Your Firebase Project ID"
+      - key: FIREBASE_CLIENT_EMAIL
+        sync: false
+        placeholder: "Your Firebase Client Email"
+      - key: FIREBASE_PRIVATE_KEY
+        sync: false
+        placeholder: "Your Firebase Private Key (make sure to preserve standard formatting)"
