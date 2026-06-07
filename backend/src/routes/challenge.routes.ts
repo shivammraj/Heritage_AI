@@ -62,7 +62,7 @@ function buildPublicChallenge(challenge: any, now: Date) {
     isRevealed,
     timeRemaining,
     choices: shuffledChoices,
-    artworkURL: `http://localhost:${process.env.PORT || 3001}/api/challenge/${challenge.id}/artwork`,
+    artworkURL: `/api/challenge/${challenge.id}/artwork`,
   };
 }
 
@@ -152,8 +152,8 @@ router.post('/create', requireAuth, async (req: AuthRequest, res: Response): Pro
 
     res.json({
       challengeId,
-      artworkURL: `http://localhost:${process.env.PORT || 3001}/api/challenge/${challengeId}/artwork`,
-      shareCardURL: `http://localhost:${process.env.PORT || 3001}/api/challenge/${challengeId}/sharecard.png`,
+      artworkURL: `/api/challenge/${challengeId}/artwork`,
+      shareCardURL: `/api/challenge/${challengeId}/sharecard.png`,
       clues,
       shareText,
       validationPassed: allValidation.allValid,
