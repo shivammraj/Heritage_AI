@@ -54,6 +54,58 @@ export const MOCK_HERITAGE_CHALLENGES: Challenge[] = [
     category: 'Festivals'
   },
   {
+    id: 'challenge-westbengal-food',
+    creatorId: 'admin',
+    theme: 'food',
+    artworkURL: 'https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=600&q=80',
+    clues: [
+      'Famous for its sweet syrup-filled cottage cheese balls (Rasgulla).',
+      'Cuisine is characterized by a balance of sweet and spicy flavors, often cooked in mustard oil.',
+      'Commonly served on a banana leaf during festivals like Durga Puja.'
+    ],
+    shareText: 'Guess this state from its iconic sweet and savory cuisine!',
+    guessCount: 142,
+    correctCount: 98,
+    isDaily: false,
+    isRevealed: false,
+    timeRemaining: 15 * 3600000,
+    validationPassed: true,
+    createdAt: new Date().toISOString(),
+    stateName: 'West Bengal',
+    title: 'Discover the culinary heart of this state',
+    difficulty: 'Medium',
+    points: 50,
+    hint: 'Famous for Rasgulla and Sandesh, cooked in mustard oil.',
+    funFact: 'Rasgulla was awarded a GI tag in 2017 representing this state\'s unique preparation style.',
+    category: 'Food'
+  },
+  {
+    id: 'challenge-kerala-nature',
+    creatorId: 'admin',
+    theme: 'nature',
+    artworkURL: 'https://images.unsplash.com/photo-1506461883276-5d4a3888c03b?auto=format&fit=crop&w=600&q=80',
+    clues: [
+      'Famous for Munnar, a scenic hill station with sprawling tea plantations.',
+      'Known for its tranquil palm-fringed backwaters and houseboat cruises.',
+      'Home to Periyar National Park, a wildlife sanctuary for elephants and tigers.'
+    ],
+    shareText: 'Guess the state from this breathtaking tea garden landscape!',
+    guessCount: 112,
+    correctCount: 89,
+    isDaily: false,
+    isRevealed: false,
+    timeRemaining: 10 * 3600000,
+    validationPassed: true,
+    createdAt: new Date().toISOString(),
+    stateName: 'Kerala',
+    title: 'Identify this green coastal paradise',
+    difficulty: 'Easy',
+    points: 30,
+    hint: 'Lush tea plantations in Munnar and serene backwaters.',
+    funFact: 'Munnar rises 1,600 meters above sea level and was once the summer resort of the British Government in South India.',
+    category: 'Nature'
+  },
+  {
     id: 'challenge-jharkhand',
     creatorId: 'admin',
     theme: 'spirit',
@@ -78,6 +130,32 @@ export const MOCK_HERITAGE_CHALLENGES: Challenge[] = [
     hint: 'Performed when Sal trees bloom in spring.',
     funFact: 'Sarhul marks the beginning of the New Year for tribes like Oraon, Munda, and Ho, worshipping mother nature.',
     category: 'Culture'
+  },
+  {
+    id: 'challenge-tamilnadu-food',
+    creatorId: 'admin',
+    theme: 'food',
+    artworkURL: 'https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=600&q=80',
+    clues: [
+      'Known for thin, crispy fermented rice crepes served with coconut chutney and sambar.',
+      'The traditional breakfast includes steamed rice cakes called Idlis.',
+      'Famous for its strong, aromatic filter coffee brewed in brass tumblers.'
+    ],
+    shareText: 'Can you guess the state famous for this crispy golden breakfast?',
+    guessCount: 165,
+    correctCount: 130,
+    isDaily: false,
+    isRevealed: false,
+    timeRemaining: 19 * 3600000,
+    validationPassed: true,
+    createdAt: new Date().toISOString(),
+    stateName: 'Tamil Nadu',
+    title: 'Name the home of filter coffee and crispy crepes',
+    difficulty: 'Easy',
+    points: 30,
+    hint: 'Home to traditional brass filter coffee and crispy Masala Dosa.',
+    funFact: 'Filter coffee is a cultural staple here, traditionally served in a metal tumbler and dabarah (saucer) to cool it down.',
+    category: 'Food'
   },
   {
     id: 'challenge-mp',
@@ -106,6 +184,32 @@ export const MOCK_HERITAGE_CHALLENGES: Challenge[] = [
     category: 'Monuments'
   },
   {
+    id: 'challenge-meghalaya-nature',
+    creatorId: 'admin',
+    theme: 'nature',
+    artworkURL: 'https://images.unsplash.com/photo-1508873696983-2df519f0397e?auto=format&fit=crop&w=600&q=80',
+    clues: [
+      'Known for bridges handmade from the aerial roots of rubber fig trees.',
+      'Contains the wettest place on Earth, receiving over 11,000 mm of annual rain.',
+      'Lush green valleys with spectacular waterfalls and limestone caves.'
+    ],
+    shareText: 'Which state is home to these incredible living root bridges?',
+    guessCount: 92,
+    correctCount: 41,
+    isDaily: false,
+    isRevealed: false,
+    timeRemaining: 14 * 3600000,
+    validationPassed: true,
+    createdAt: new Date().toISOString(),
+    stateName: 'Meghalaya',
+    title: 'Guess the land of clouds and root bridges',
+    difficulty: 'Medium',
+    points: 60,
+    hint: 'Features Mawsynram, the wettest place on Earth, and rubber tree root bridges.',
+    funFact: 'The living root bridges can take 10 to 15 years to grow, but they become stronger over time, lasting for centuries.',
+    category: 'Nature'
+  },
+  {
     id: 'challenge-tamilnadu',
     creatorId: 'admin',
     theme: 'spirit',
@@ -129,6 +233,32 @@ export const MOCK_HERITAGE_CHALLENGES: Challenge[] = [
     points: 30,
     hint: 'Originated in temples of South India, set to Carnatic music.',
     funFact: 'Bharatanatyam is one of the oldest classical dance traditions of India, dating back over 2000 years.',
+    category: 'Culture'
+  },
+  {
+    id: 'challenge-up-spirit',
+    creatorId: 'admin',
+    theme: 'spirit',
+    artworkURL: 'https://images.unsplash.com/photo-1561361513-2d000a50f0db?auto=format&fit=crop&w=600&q=80',
+    clues: [
+      'Famous for the daily evening ritual of fire offering on the banks of a sacred river.',
+      'Home to Varanasi, one of the oldest continuously inhabited cities in the world.',
+      'Sadhus and pilgrims gather at the ghats for spiritual cleansing.'
+    ],
+    shareText: 'Guess the spiritual heartland shown in this sacred evening prayer!',
+    guessCount: 125,
+    correctCount: 78,
+    isDaily: false,
+    isRevealed: false,
+    timeRemaining: 16 * 3600000,
+    validationPassed: true,
+    createdAt: new Date().toISOString(),
+    stateName: 'Uttar Pradesh',
+    title: 'Identify the home of this sacred river ritual',
+    difficulty: 'Medium',
+    points: 50,
+    hint: 'Takes place on the ghats of Varanasi during sunset.',
+    funFact: 'The Ganga Aarti is performed using large brass lamps with chants and devotional songs, attracting thousands of visitors daily.',
     category: 'Culture'
   },
   {
@@ -158,6 +288,32 @@ export const MOCK_HERITAGE_CHALLENGES: Challenge[] = [
     category: 'Monuments'
   },
   {
+    id: 'challenge-up-taj',
+    creatorId: 'admin',
+    theme: 'architecture',
+    artworkURL: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80',
+    clues: [
+      'An iconic white marble mausoleum on the south bank of the Yamuna River.',
+      'Commissioned in 1632 by the Mughal emperor Shah Jahan.',
+      'One of the New Seven Wonders of the World and a UNESCO World Heritage site.'
+    ],
+    shareText: 'Guess the state that houses this ultimate monument of love!',
+    guessCount: 200,
+    correctCount: 185,
+    isDaily: false,
+    isRevealed: false,
+    timeRemaining: 23 * 3600000,
+    validationPassed: true,
+    createdAt: new Date().toISOString(),
+    stateName: 'Uttar Pradesh',
+    title: 'Identify the state of this marble wonder',
+    difficulty: 'Easy',
+    points: 20,
+    hint: 'Built by Shah Jahan in Agra.',
+    funFact: 'The materials for Taj Mahal were brought from all over India and Central Asia, using over 1,000 elephants.',
+    category: 'Monuments'
+  },
+  {
     id: 'challenge-punjab',
     creatorId: 'admin',
     theme: 'festival',
@@ -184,3 +340,4 @@ export const MOCK_HERITAGE_CHALLENGES: Challenge[] = [
     category: 'Festivals'
   }
 ];
+

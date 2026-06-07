@@ -37,15 +37,38 @@ const POLAROID_STACK = [
   { bg: 'linear-gradient(135deg,#12091E,#5A4010)', label: 'Architecture · #072', rotate: 12, hoverRotate: 18, z: 5, offsetY: -10 },
 ];
 
-const HERITAGE_PHOTOS = [
-  'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80', // Rajasthan / Amer Fort
-  'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=600&q=80', // Kerala / Boat race
-  'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&w=600&q=80', // Jharkhand / Sarhul
-  'https://images.unsplash.com/photo-1569949380643-6e7a6ec99e45?auto=format&fit=crop&w=600&q=80', // MP / Khajuraho
-  'https://images.unsplash.com/photo-1583089892943-e02e5b017b6a?auto=format&fit=crop&w=600&q=80', // Tamil Nadu / Bharatanatyam
-  'https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=600&q=80', // Gujarat / Stepwell
-  'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=600&q=80', // Punjab / Bhangra
-];
+const CATEGORY_POOLS = {
+  festival: [
+    'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=600&q=80', // Kerala Boat Race
+    'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=600&q=80', // Punjab Bhangra
+    'https://images.unsplash.com/photo-1600132806608-231446b2e7af?auto=format&fit=crop&w=600&q=80', // West Bengal Durga Puja
+    'https://images.unsplash.com/photo-1567186937675-a5131c8a89ea?auto=format&fit=crop&w=600&q=80', // Maharashtra Ganesh Chaturthi
+  ],
+  cuisine: [
+    'https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=600&q=80', // South Indian Masala Dosa
+    'https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=600&q=80', // North Indian Chole Bhature/Thali
+    'https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=600&q=80', // Telangana Hyderabadi Biryani
+    'https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=600&q=80', // Samosas / Indian snacks
+  ],
+  spirit: [
+    'https://images.unsplash.com/photo-1583089892943-e02e5b017b6a?auto=format&fit=crop&w=600&q=80', // Tamil Nadu Bharatanatyam
+    'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&w=600&q=80', // Jharkhand Sarhul tribal dance
+    'https://images.unsplash.com/photo-1561361513-2d000a50f0db?auto=format&fit=crop&w=600&q=80', // Uttar Pradesh Ganga Aarti Varanasi
+    'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=600&q=80', // Monastery / Monks
+  ],
+  nature: [
+    'https://images.unsplash.com/photo-1506461883276-5d4a3888c03b?auto=format&fit=crop&w=600&q=80', // Kerala Munnar Tea Gardens
+    'https://images.unsplash.com/photo-1508873696983-2df519f0397e?auto=format&fit=crop&w=600&q=80', // Meghalaya Living Root Bridge
+    'https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?auto=format&fit=crop&w=600&q=80', // Ladakh mountain valley
+    'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80', // Uttarakhand Valley / Rishikesh
+  ],
+  architecture: [
+    'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80', // Rajasthan Amer Fort
+    'https://images.unsplash.com/photo-1569949380643-6e7a6ec99e45?auto=format&fit=crop&w=600&q=80', // MP Khajuraho temples
+    'https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=600&q=80', // Gujarat Rani ki Vav Stepwell
+    'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80', // Uttar Pradesh Taj Mahal
+  ]
+};
 
 export default function Landing() {
   const stepsRef = useRef<HTMLElement>(null);
@@ -54,15 +77,19 @@ export default function Landing() {
   const statsInView = useInView(statsRef, { once: true, margin: '-60px' });
 
   const [polaroidImages, setPolaroidImages] = useState<string[]>([
-    'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=600&q=80',
-    'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=600&q=80',
-    'https://images.unsplash.com/photo-1583089892943-e02e5b017b6a?auto=format&fit=crop&w=600&q=80',
-    'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&w=600&q=80',
-    'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80',
+    CATEGORY_POOLS.festival[0],
+    CATEGORY_POOLS.cuisine[0],
+    CATEGORY_POOLS.spirit[0],
+    CATEGORY_POOLS.nature[0],
+    CATEGORY_POOLS.architecture[0],
   ]);
 
   const handlePolaroidClick = (index: number) => {
-    const remaining = HERITAGE_PHOTOS.filter(img => !polaroidImages.includes(img));
+    const keys: (keyof typeof CATEGORY_POOLS)[] = ['festival', 'cuisine', 'spirit', 'nature', 'architecture'];
+    const key = keys[index];
+    const pool = CATEGORY_POOLS[key];
+    const currentImg = polaroidImages[index];
+    const remaining = pool.filter(img => img !== currentImg);
     if (remaining.length === 0) return;
     const nextImg = remaining[Math.floor(Math.random() * remaining.length)];
     const newImgs = [...polaroidImages];
