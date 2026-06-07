@@ -1,0 +1,34 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+
+# Environment files and credentials
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.pem
+*.key
+*-adminsdk-*.json
+*.adminsdk.json
+credentials.json
+serviceAccountKey.json
+service-account*.json
+
+# System / IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

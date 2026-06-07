@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // User Profiles
+    match /users/{userId} {
+      allow read: if true;
+      allow write, update: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Challenges
+    match /challenges/{challengeId} {
+      allow read: if true;
+      allow create: if request.auth != null;
+      allow update: if true; // to increment guess counts
+      allow delete: if request.auth != null && resource.data.creatorId == request.auth.uid;
+    }
+
+    // Guesses
+    match /guesses/{guessId} {
+      allow read: if request.auth != null && resource.data.userId == request.auth.uid;
+      allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if false; // guesses are immutable
+    }
+  }
+}
